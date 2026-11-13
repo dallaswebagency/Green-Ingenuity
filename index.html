@@ -82,9 +82,15 @@ nav a:hover::after,nav a.on::after{width:100%}
 .hero .facts div{padding:18px 26px 0 0;margin-right:26px;border-right:1px solid var(--line);font-size:14.5px;color:var(--muted);line-height:1.35}
 .hero .facts div:last-child{border:0}
 .hero .facts b{display:block;font-family:var(--serif);font-weight:400;font-size:28px;color:var(--forest)}
-.hero-media{position:relative;align-self:start;margin-bottom:56px}
-.hero-media .ph{aspect-ratio:4/3.6;clip-path:polygon(0 0,82% 0,100% 16%,100% 100%,0 100%);border-radius:0 0 0 0}
-.stamp{position:absolute;left:-56px;bottom:-40px;width:150px;height:150px;border-radius:50%;background:var(--leaf);color:#fff;display:grid;place-items:center;text-align:center;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;line-height:1.3;box-shadow:0 18px 40px -16px rgba(29,58,34,.6)}
+.hero-media{position:relative;align-self:start;margin-bottom:56px;padding:0 30px 30px 0}
+.hero-media::before{content:"";position:absolute;right:0;bottom:0;width:70%;height:76%;border-radius:28px;background:repeating-linear-gradient(90deg,var(--forest) 0 18px,var(--leaf) 18px 24px,var(--cream) 24px 30px,var(--moss) 30px 44px,var(--linen) 44px 50px)}
+.hero-media .ph{position:relative;aspect-ratio:4/3.3;border-radius:28px;box-shadow:0 30px 60px -30px rgba(29,58,34,.55)}
+.hero-chip{position:absolute;top:34px;left:-40px;z-index:2;background:#fff;border-radius:18px;padding:14px 20px 14px 14px;display:flex;gap:12px;align-items:center;box-shadow:0 20px 40px -18px rgba(29,58,34,.45);line-height:1.25}
+.hero-chip i{width:42px;height:42px;border-radius:12px;background:var(--leaf-soft);display:grid;place-items:center;flex:none}
+.hero-chip i svg{width:22px;height:22px;stroke:var(--moss);fill:none;stroke-width:1.8}
+.hero-chip b{display:block;font-size:15px;color:var(--forest)}
+.hero-chip small{font-size:13px;color:var(--muted)}
+.stamp{position:absolute;left:-46px;bottom:-6px;z-index:2;width:150px;height:150px;border-radius:50%;background:var(--leaf);color:#fff;display:grid;place-items:center;text-align:center;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;line-height:1.3;box-shadow:0 18px 40px -16px rgba(29,58,34,.6)}
 .stamp b{display:block;font-family:var(--serif);font-weight:400;font-size:46px;letter-spacing:0;line-height:1}
 .stamp::before{content:"";position:absolute;inset:8px;border:1.5px dashed rgba(255,255,255,.6);border-radius:50%}
 
@@ -128,7 +134,7 @@ nav a:hover::after,nav a.on::after{width:100%}
 .rugs{background:var(--linen);padding:110px 0;position:relative;overflow:hidden}
 .rugs .grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
 .rugs .ph{aspect-ratio:3/4}
-.rugs .ph{border-radius:22px 120px 22px 22px}
+.rugs .ph{border-radius:22px}
 .rugs h2{font-size:clamp(34px,4.2vw,58px);color:var(--forest);margin:16px 0 22px}
 .rugs .steps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:34px 0}
 .rugs .steps div{background:var(--cream);border-radius:16px;padding:22px 22px 20px;border:1px solid var(--line)}
@@ -229,7 +235,9 @@ footer ul a:hover{color:#fff}
   .hcta .ph-num,.util .soc{display:none}
   .hero .grid,.svc-grid,.rugs .grid,.eco .top,.about .grid,.book .card,.f-top,.statement .grid{grid-template-columns:1fr}
   .hero{padding-top:40px}
-  .stamp{left:auto;right:16px;bottom:-30px;width:120px;height:120px}
+  .stamp{left:auto;right:6px;bottom:-24px;width:120px;height:120px}
+  .hero-chip{left:12px;top:12px}
+  .hero-media{padding:0 16px 16px 0}
   .stamp b{font-size:36px}
   .svc-visual{position:relative;top:0}
   .svc-head,.blog-head{flex-direction:column;align-items:flex-start}
@@ -318,6 +326,7 @@ footer ul a:hover{color:#fff}
     </div>
     <div class="hero-media">
       <div class="ph"><img src="images/hero-rug-cleaning.jpg" alt="Green Ingenuity technician cleaning an area rug in a Calgary living room" onerror="this.remove()"></div>
+      <div class="hero-chip"><i><svg viewBox="0 0 24 24"><path d="M4 20c6 0 9-3 10-9M4 20c0-8 5-14 16-16-1 11-7 16-16 16z"/></svg></i><span><b>Environmentally-safe</b><small>Rugs · Carpet · Upholstery</small></span></div>
       <div class="stamp"><div><b>50+</b>Years in<br>Calgary</div></div>
     </div>
   </div>
