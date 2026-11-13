@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Ingenuity | Rug, Carpet &amp; Upholstery Cleaning in Calgary</title>
+<meta name="description" content="Environmentally-safe rug, carpet and upholstery cleaning in Calgary. Area rug cleaning, restoration, fringing and repair, plus water and pet damage. Call 403-243-8420.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#1d3a22;
+  --forest-2:#244a2b;
+  --moss:#3f7c38;
+  --leaf:#5fb244;
+  --leaf-soft:#e3f0d9;
+  --cream:#f5f2e8;
+  --linen:#ebe5d4;
+  --ink:#1b2419;
+  --muted:#5d665a;
+  --plum:#6e3d8a;
+  --line:rgba(29,58,34,.14);
+  --serif:'Young Serif',Georgia,serif;
+  --sans:'Figtree',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{width:min(1240px,92vw);margin:0 auto}
+.eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--moss)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;font-size:16px;transition:.25s}
+.btn-leaf{background:var(--leaf);color:#fff}
+.btn-leaf:hover{background:var(--moss)}
+.btn-line{border:1.5px solid var(--forest);color:var(--forest)}
+.btn-line:hover{background:var(--forest);color:#fff}
+.btn svg{width:18px;height:18px}
+
+/* image slots: show woven pattern until the Flow image is added */
+.ph{position:relative;overflow:hidden;background:
+  repeating-linear-gradient(90deg,rgba(29,58,34,.10) 0 2px,transparent 2px 14px),
+  repeating-linear-gradient(0deg,rgba(95,178,68,.12) 0 2px,transparent 2px 14px),var(--linen)}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+/* utility bar */
+.util{background:var(--forest);color:#dfe9d6;font-size:14px}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:9px 0}
+.util .promo{display:flex;align-items:center;gap:10px}
+.util .tag{background:var(--plum);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:4px}
+.util .soc{display:flex;gap:14px;align-items:center}
+.util .soc a{opacity:.8}.util .soc a:hover{opacity:1}
+.util svg{width:15px;height:15px;fill:currentColor;display:block}
+
+/* header */
+header{background:var(--cream);position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:16px;flex-shrink:0}
+.brand .script{height:52px;width:auto}
+.brand .rule{width:1px;height:46px;background:var(--line)}
+.brand .tagline{height:44px;width:auto}
+nav ul{display:flex;gap:26px;list-style:none;font-weight:600;font-size:15px;white-space:nowrap}
+nav a{position:relative;padding:6px 0}
+nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--leaf);transition:.25s}
+nav a:hover::after,nav a.on::after{width:100%}
+.hcta{display:flex;align-items:center;gap:18px}
+.hcta .ph-num{font-weight:700;font-size:15px;line-height:1.2;text-align:right;white-space:nowrap}
+.hcta .btn{white-space:nowrap}
+.hcta .ph-num small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.menu-btn{display:none;background:none;border:0;cursor:pointer}
+
+/* hero */
+.hero{padding:70px 0 0}
+.hero .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:end}
+.hero h1{font-size:clamp(42px,5.4vw,76px);color:var(--forest)}
+.hero h1 em{font-style:normal;color:var(--leaf)}
+.hero .lead{font-family:'Caveat',cursive;font-size:32px;color:var(--moss);margin:22px 0 30px;line-height:1.15}
+.hero .acts{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:46px}
+.hero .facts{display:flex;gap:0;border-top:1px solid var(--line);margin-bottom:56px}
+.hero .facts div{padding:18px 26px 0 0;margin-right:26px;border-right:1px solid var(--line);font-size:14.5px;color:var(--muted);line-height:1.35}
+.hero .facts div:last-child{border:0}
+.hero .facts b{display:block;font-family:var(--serif);font-weight:400;font-size:28px;color:var(--forest)}
+.hero-media{position:relative;align-self:start;margin-bottom:56px}
+.hero-media .ph{aspect-ratio:4/3.6;clip-path:polygon(0 0,82% 0,100% 16%,100% 100%,0 100%);border-radius:0 0 0 0}
+.stamp{position:absolute;left:-56px;bottom:-40px;width:150px;height:150px;border-radius:50%;background:var(--leaf);color:#fff;display:grid;place-items:center;text-align:center;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;line-height:1.3;box-shadow:0 18px 40px -16px rgba(29,58,34,.6)}
+.stamp b{display:block;font-family:var(--serif);font-weight:400;font-size:46px;letter-spacing:0;line-height:1}
+.stamp::before{content:"";position:absolute;inset:8px;border:1.5px dashed rgba(255,255,255,.6);border-radius:50%}
+
+/* striped rug band */
+.weave{height:22px;background:repeating-linear-gradient(90deg,var(--forest) 0 18px,var(--leaf) 18px 24px,var(--cream) 24px 30px,var(--moss) 30px 44px,var(--linen) 44px 50px)}
+
+/* statement */
+.statement{padding:110px 0 90px}
+.statement .grid{display:grid;grid-template-columns:220px 1fr;gap:40px}
+.statement p.big{font-family:var(--serif);font-size:clamp(28px,3.3vw,44px);line-height:1.22;color:var(--forest)}
+.statement p.big span{background:linear-gradient(transparent 62%,var(--leaf-soft) 62%)}
+
+/* services index */
+.services{padding:0 0 120px}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:44px}
+.svc-head h2{font-size:clamp(34px,4vw,54px);color:var(--forest);max-width:620px}
+.toggle{display:inline-flex;background:var(--linen);border-radius:999px;padding:5px}
+.toggle button{border:0;background:none;font:600 15px var(--sans);padding:10px 22px;border-radius:999px;cursor:pointer;color:var(--muted)}
+.toggle button.on{background:var(--forest);color:#fff}
+.svc-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.svc-visual{position:sticky;top:110px}
+.svc-visual .ph{aspect-ratio:4/3;border-radius:22px}
+.svc-visual .ph img{position:absolute;inset:0;opacity:0;transition:opacity .45s}
+.svc-visual .ph img.show{opacity:1}
+.svc-visual .cap{display:flex;justify-content:space-between;margin-top:16px;font-size:14px;color:var(--muted)}
+.svc-list{list-style:none;border-top:1px solid var(--line)}
+.svc-list li{border-bottom:1px solid var(--line)}
+.svc-list a{display:grid;grid-template-columns:56px 1fr 40px;gap:18px;padding:26px 0;align-items:start;transition:.3s}
+.svc-list .n{font-family:var(--serif);font-size:18px;color:var(--leaf);padding-top:6px}
+.svc-list h3{font-size:30px;color:var(--forest);margin-bottom:8px;transition:.3s}
+.svc-list p{color:var(--muted);font-size:16px;max-width:520px}
+.svc-list .arr{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;transition:.3s;margin-top:4px}
+.svc-list .arr svg{width:16px;height:16px}
+.svc-list li.active h3,.svc-list a:hover h3{color:var(--moss);transform:translateX(6px)}
+.svc-list li.active .arr,.svc-list a:hover .arr{background:var(--leaf);border-color:var(--leaf);color:#fff}
+.svc-list li.hide{display:none}
+.chips{display:flex;gap:8px;margin-top:12px}
+.chips span{font-size:12px;font-weight:700;letter-spacing:.06em;padding:4px 11px;border-radius:999px;background:var(--leaf-soft);color:var(--moss)}
+
+/* rug spotlight */
+.rugs{background:var(--linen);padding:110px 0;position:relative;overflow:hidden}
+.rugs .grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.rugs .ph{aspect-ratio:3/4}
+.rugs .ph{border-radius:22px 120px 22px 22px}
+.rugs h2{font-size:clamp(34px,4.2vw,58px);color:var(--forest);margin:16px 0 22px}
+.rugs .steps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:34px 0}
+.rugs .steps div{background:var(--cream);border-radius:16px;padding:22px 22px 20px;border:1px solid var(--line)}
+.rugs .steps b{font-family:var(--serif);font-weight:400;font-size:24px;color:var(--forest);display:block}
+.rugs .steps small{color:var(--muted);font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.rugs .links{display:flex;gap:14px;flex-wrap:wrap}
+
+/* eco */
+.eco{background:var(--forest);color:#e8efe2;padding:120px 0 0;position:relative}
+.eco .top{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end;margin-bottom:70px}
+.eco h2{font-size:clamp(32px,3.8vw,52px);color:#fff}
+.eco h2 em{font-style:normal;color:var(--leaf)}
+.eco .top p{color:#b9c8b3;font-size:18px}
+.eco .tiles{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.14)}
+.eco .tiles div{padding:34px 26px 40px 0;border-right:1px solid rgba(255,255,255,.14);margin-right:26px}
+.eco .tiles div:last-child{border:0;margin:0}
+.eco .tiles svg{width:38px;height:38px;stroke:var(--leaf);fill:none;stroke-width:1.6;margin-bottom:18px}
+.eco .tiles h3{font-size:24px;color:#fff;margin-bottom:6px}
+.eco .tiles p{color:#9fb199;font-size:15px}
+.eco .banner{margin-top:10px}
+.eco .banner .ph{aspect-ratio:16/6;border-radius:24px 24px 0 0;background-color:#2b5232}
+
+/* about */
+.about{padding:120px 0}
+.about .grid{display:grid;grid-template-columns:auto 1fr;gap:80px;align-items:center}
+.years{font-family:var(--serif);font-size:clamp(130px,16vw,230px);line-height:.8;color:var(--leaf);position:relative}
+.years sup{font-size:.4em;vertical-align:top;color:var(--moss)}
+.years span{display:block;font-family:var(--sans);font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--forest);font-weight:700;margin-top:18px}
+.about h2{font-size:clamp(32px,3.6vw,48px);color:var(--forest);margin:14px 0 20px}
+.about p{color:var(--muted);font-size:18px;max-width:640px;margin-bottom:28px}
+
+/* booking */
+.book{padding:0 0 120px}
+.book .card{display:grid;grid-template-columns:.85fr 1.15fr;border-radius:28px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 40px 80px -50px rgba(29,58,34,.45)}
+.book .side{background:var(--leaf);color:#fff;padding:56px 48px;display:flex;flex-direction:column;justify-content:space-between;gap:40px;position:relative;overflow:hidden}
+.book .side::after{content:"";position:absolute;right:-90px;bottom:-90px;width:260px;height:260px;border-radius:50%;border:40px solid rgba(255,255,255,.12)}
+.book .side h2{font-size:clamp(34px,3.6vw,50px)}
+.book .side p{opacity:.92;margin-top:14px;font-size:17px}
+.book .side .call small{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;opacity:.85}
+.book .side .call a{font-family:var(--serif);font-size:34px}
+.book form{padding:52px 48px;display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.book label{display:flex;flex-direction:column;gap:7px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--forest)}
+.book input,.book select{font:500 16px var(--sans);padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;background:var(--cream);color:var(--ink);outline:none;transition:.2s}
+.book input:focus,.book select:focus{border-color:var(--leaf);background:#fff}
+.book .full{grid-column:1/-1}
+.book button{grid-column:1/-1;justify-self:start;border:0;cursor:pointer;margin-top:6px}
+
+/* blog */
+.blog{padding:110px 0;background:var(--cream);border-top:1px solid var(--line)}
+.blog-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:46px;gap:20px}
+.blog-head h2{font-size:clamp(34px,4vw,54px);color:var(--forest)}
+.posts{display:grid;grid-template-columns:1.35fr 1fr;gap:40px;align-items:start}
+.post{display:flex;flex-direction:column;gap:16px}
+.post .ph{aspect-ratio:16/9;border-radius:18px}
+.post .meta{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--moss)}
+.post h3{font-size:25px;color:var(--forest);transition:.25s}
+.post:hover h3{color:var(--moss)}
+.post p{color:var(--muted);font-size:16px}
+.post.lead{grid-row:auto}
+.side-col{display:flex;flex-direction:column;gap:26px}
+.side-col .post+.post{padding-top:26px;border-top:1px solid var(--line)}
+.post.lead h3{font-size:34px}
+.post.side{display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:start}
+.post.side .ph{aspect-ratio:16/9}
+.post.side h3{font-size:22px;margin:6px 0 8px}
+.post.side p{font-size:15px}
+.more{font-weight:700;color:var(--forest);display:inline-flex;gap:8px;align-items:center;border-bottom:2px solid var(--leaf);padding-bottom:2px;align-self:flex-start}
+
+/* footer */
+footer{background:var(--forest);color:#c4d2be;padding:90px 0 0}
+.f-top{display:grid;grid-template-columns:1.3fr .8fr 1.2fr;gap:60px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.12)}
+.f-brand .logo-pill{display:inline-flex;align-items:center;gap:14px;background:var(--cream);padding:14px 20px;border-radius:16px}
+.f-brand .logo-pill .script{height:40px}
+.f-brand .logo-pill .tagline{height:34px}
+.f-brand p{margin:24px 0;max-width:380px;font-size:15.5px}
+.f-brand .tel{font-family:var(--serif);font-size:32px;color:#fff}
+footer h4{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--leaf);margin-bottom:20px}
+footer ul{list-style:none;display:grid;gap:10px;font-size:15.5px}
+footer ul a:hover{color:#fff}
+.f-soc{display:flex;gap:10px;margin-top:26px}
+.f-soc a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;transition:.25s}
+.f-soc a:hover{background:var(--leaf);border-color:var(--leaf)}
+.f-soc svg{width:16px;height:16px;fill:#fff}
+.f-bot{display:flex;justify-content:space-between;gap:20px;padding:24px 0;font-size:14px;flex-wrap:wrap}
+.f-bot a{color:#fff;font-weight:600}
+.f-bot a:hover{color:var(--leaf)}
+.float-call{display:none}
+
+@media (max-width:1480px){.hcta .ph-num{display:none}}
+@media (max-width:1100px){
+  nav{display:none}
+  .menu-btn{display:block}
+  nav.open{display:block;position:absolute;top:100%;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--line)}
+  nav.open ul{flex-direction:column;gap:0;padding:10px 4vw 20px}
+  nav.open a{display:block;padding:12px 0}
+}
+@media (max-width:960px){
+  .hcta .ph-num,.util .soc{display:none}
+  .hero .grid,.svc-grid,.rugs .grid,.eco .top,.about .grid,.book .card,.f-top,.statement .grid{grid-template-columns:1fr}
+  .hero{padding-top:40px}
+  .stamp{left:auto;right:16px;bottom:-30px;width:120px;height:120px}
+  .stamp b{font-size:36px}
+  .svc-visual{position:relative;top:0}
+  .svc-head,.blog-head{flex-direction:column;align-items:flex-start}
+  .eco .tiles{grid-template-columns:1fr 1fr}
+  .eco .tiles div{margin-right:0;padding-right:16px;border-right:0;border-bottom:1px solid rgba(255,255,255,.14)}
+  .posts{grid-template-columns:1fr}
+  .post.lead{grid-row:auto}
+  .about .grid{gap:30px}
+  .rugs .grid{gap:40px}
+  .rugs .ph{max-height:520px}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .util .promo span:last-child{display:none}
+  .brand .rule,.brand .tagline{display:none}
+  .brand .script{height:40px}
+  .hcta .btn{display:none}
+  .hero .facts{flex-direction:column}
+  .hero .facts div{border:0;padding-top:14px}
+  .rugs .steps,.book form{grid-template-columns:1fr}
+  .book form,.book .side{padding:36px 24px}
+  .post.side{grid-template-columns:1fr}
+  .eco .tiles{grid-template-columns:1fr}
+  .float-call{display:flex;position:fixed;right:16px;bottom:16px;z-index:60;background:var(--leaf);color:#fff;border-radius:999px;padding:14px 20px;font-weight:700;gap:8px;align-items:center;box-shadow:0 12px 30px -10px rgba(0,0,0,.4)}
+  .float-call svg{width:18px;height:18px}
+}
+</style>
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <div class="promo"><span class="tag">Seasonal Pricing in Effect</span><span>Rugs, carpet and upholstery back to looking their best</span></div>
+    <div class="soc">
+      <a href="tel:4032438420" style="opacity:1;font-weight:700;margin-right:8px">Call 403-243-8420</a>
+      <a href="https://www.facebook.com/green.ingenuity1" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6H14z"/></svg></a>
+      <a href="https://twitter.com/greeningenuity" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22 5.9c-.7.3-1.5.5-2.4.6.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1-1.6-1.7-4.3-1.7-5.9 0-1 1-1.4 2.4-1.1 3.8C8.4 8.8 5.4 7.2 3.4 4.7c-1.1 1.9-.5 4.3 1.3 5.5-.7 0-1.3-.2-1.9-.5 0 2 1.4 3.7 3.3 4.1-.6.2-1.2.2-1.9.1.5 1.7 2.1 2.8 3.9 2.9-1.7 1.3-3.8 2-6 1.8 1.9 1.2 4.1 1.9 6.4 1.9 7.7 0 12-6.4 12-12v-.5c.8-.6 1.5-1.3 2-2.1z"/></svg></a>
+      <a href="https://www.pinterest.com/rosieraves/" target="_blank" rel="noopener" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2.1 0-3l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.7 1.3 1.4 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.9 1.6 1.9 1.9 0 3.3-2 3.3-4.9 0-2.5-1.8-4.3-4.4-4.3-3 0-4.8 2.3-4.8 4.6 0 .9.4 1.9.8 2.4.1.1.1.2.1.3l-.3 1.2c0 .2-.2.3-.4.2-1.4-.6-2.2-2.6-2.2-4.2 0-3.4 2.5-6.6 7.2-6.6 3.8 0 6.7 2.7 6.7 6.3 0 3.8-2.4 6.8-5.7 6.8-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.2 1-.9 2.2-1.4 2.9A10 10 0 1 0 12 2z"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="brand" aria-label="Green Ingenuity home">
+      <img class="script" src="images/logo.png" alt="Green Ingenuity">
+      <span class="rule"></span>
+      <img class="tagline" src="images/logo-tagline.png" alt="Rug, Carpet, Upholstery Cleaning">
+    </a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#" class="on">Home</a></li>
+        <li><a href="https://www.greeningenuity.ca/blog/product/area-rug-cleaning/">Rugs</a></li>
+        <li><a href="https://www.greeningenuity.ca/blog/product/area-rug-cleaning/">Home Services</a></li>
+        <li><a href="https://www.greeningenuity.ca/blog/product/commercial-area-rug-cleaning/">Commercial Services</a></li>
+        <li><a href="https://www.greeningenuity.ca/blog/">Bob’s Blog</a></li>
+        <li><a href="https://www.greeningenuity.ca/contact-us/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hcta">
+      <a class="ph-num" href="tel:4032438420"><small>Call us now</small>403-243-8420</a>
+      <a class="btn btn-leaf" href="#book">Book Online</a>
+      <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1d3a22" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">Rug · Carpet · Upholstery Cleaning · Calgary</p>
+      <h1 style="margin-top:20px">Get your rugs, carpet and upholstery back to <em>looking their best.</em></h1>
+      <p class="lead">taking care of you, your home and the environment</p>
+      <div class="acts">
+        <a class="btn btn-leaf" href="#book">Book Online Now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" href="tel:4032438420">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          403-243-8420</a>
+      </div>
+      <div class="facts">
+        <div><b>50+ years</b>serving Calgary customers</div>
+        <div><b>Eco-safe</b>environmentally-safe cleaning</div>
+        <div><b>In-home</b>on-site by qualified technicians</div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="ph"><img src="images/hero-rug-cleaning.jpg" alt="Green Ingenuity technician cleaning an area rug in a Calgary living room" onerror="this.remove()"></div>
+      <div class="stamp"><div><b>50+</b>Years in<br>Calgary</div></div>
+    </div>
+  </div>
+</section>
+<div class="weave" aria-hidden="true"></div>
+
+<section class="statement">
+  <div class="wrap grid">
+    <p class="eyebrow">Why Green Ingenuity</p>
+    <p class="big">Your rugs, carpet and upholstery will look their best with Green Ingenuity’s <span>environmentally-safe cleaning services</span>.</p>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head">
+      <div>
+        <p class="eyebrow">Our Services</p>
+        <h2 style="margin-top:14px">Six ways we care for the fabrics in your home and workplace.</h2>
+      </div>
+      <div class="toggle" role="tablist">
+        <button class="on" data-f="all">All</button>
+        <button data-f="home">Home</button>
+        <button data-f="commercial">Commercial</button>
+      </div>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-visual">
+        <div class="ph">
+          <img class="show" src="images/service-rugs.jpg" alt="Area rug cleaning" onerror="this.remove()">
+          <img src="images/service-carpet.jpg" alt="Carpet cleaning" onerror="this.remove()">
+          <img src="images/service-upholstery.jpg" alt="Upholstery cleaning" onerror="this.remove()">
+          <img src="images/service-water-damage.jpg" alt="Water damage carpet extraction" onerror="this.remove()">
+          <img src="images/service-pet-damage.jpg" alt="Pet damage sanitizing" onerror="this.remove()">
+          <img src="images/service-auto-detailing.jpg" alt="Auto interior detailing" onerror="this.remove()">
+        </div>
+        <div class="cap"><span id="capName">01 · Rugs</span><span>Calgary, Alberta</span></div>
+      </div>
+      <ul class="svc-list" id="svcList">
+        <li class="active" data-t="home commercial" data-i="0"><a href="https://www.greeningenuity.ca/blog/product/area-rug-cleaning/">
+          <span class="n">01</span>
+          <div><h3>Rugs</h3><p>Area Rug Cleaning, Restoration, Fringing and Repair.</p><div class="chips"><span>Home</span><span>Commercial</span></div></div>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
+        <li data-t="home commercial" data-i="1"><a href="https://www.greeningenuity.ca/blog/product/residential-carpet-cleaning/">
+          <span class="n">02</span>
+          <div><h3>Carpets</h3><p>Safe, eco-friendly, in-home carpet cleaning services ensure the best possible carpet cleaning results.</p><div class="chips"><span>Home</span><span>Commercial</span></div></div>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
+        <li data-t="home commercial" data-i="2"><a href="https://www.greeningenuity.ca/blog/product/upholstery-cleaning/">
+          <span class="n">03</span>
+          <div><h3>Upholstery</h3><p>Cleaning care for your fine upholstered furniture, done in your home, by qualified technicians.</p><div class="chips"><span>Home</span><span>Commercial</span></div></div>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
+        <li data-t="home commercial" data-i="3"><a href="https://www.greeningenuity.ca/blog/product/residential-water-damage-restoration/">
+          <span class="n">04</span>
+          <div><h3>Water Damage</h3><p>Minor water damage to carpet can usually be corrected if extracted and attended to quickly.</p><div class="chips"><span>Home</span><span>Commercial</span></div></div>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
+        <li data-t="home commercial" data-i="4"><a href="https://www.greeningenuity.ca/blog/product/pet-damage-restoration/">
+          <span class="n">05</span>
+          <div><h3>Pet Damage</h3><p>Keep ahead of those little accidents by routinely using our safe sanitizing and deodorizing services.</p><div class="chips"><span>Home</span><span>Commercial</span></div></div>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
+        <li data-t="home" data-i="5"><a href="https://www.greeningenuity.ca/blog/product/auto-detailing/">
+          <span class="n">06</span>
+          <div><h3>Auto Detailing</h3><p>Eco-friendly cleaning of your car’s interior keeps it healthy and looking great.</p><div class="chips"><span>Home</span></div></div>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="rugs" id="rugs">
+  <div class="wrap grid">
+    <div class="ph"><img src="images/rug-fringe-repair.jpg" alt="Hand repair of an area rug fringe" onerror="this.remove()"></div>
+    <div>
+      <p class="eyebrow">Rugs</p>
+      <h2>Area rugs get the full treatment, from a deep clean to the last fringe.</h2>
+      <p style="color:var(--muted);font-size:18px;max-width:560px">Area Rug Cleaning, Restoration, Fringing and Repair, for your home or your business.</p>
+      <div class="steps">
+        <div><small>01</small><b>Cleaning</b></div>
+        <div><small>02</small><b>Restoration</b></div>
+        <div><small>03</small><b>Fringing</b></div>
+        <div><small>04</small><b>Repair</b></div>
+      </div>
+      <div class="links">
+        <a class="btn btn-leaf" href="https://www.greeningenuity.ca/blog/product/area-rug-cleaning/">Home Rug Cleaning</a>
+        <a class="btn btn-line" href="https://www.greeningenuity.ca/blog/product/commercial-area-rug-cleaning/">Commercial Rug Cleaning</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="eco">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <p class="eyebrow" style="color:var(--leaf)">Environmentally safe</p>
+        <h2 style="margin-top:16px">Feel good knowing your home, and the environment, are left <em>pristine.</em></h2>
+      </div>
+      <p>Our rug, carpet and upholstery cleaning will leave the environment pristine, both inside and outside of your home. Our professional on-site cleaning services are proven effective in:</p>
+    </div>
+    <div class="tiles">
+      <div><svg viewBox="0 0 24 24"><path d="M4 20c6 0 9-3 10-9M4 20c0-8 5-14 16-16-1 11-7 16-16 16z"/></svg><h3>Gently removing dirt</h3><p>Deep down in the pile, without harsh chemicals.</p></div>
+      <div><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg><h3>Minimizing germs</h3><p>A healthier surface for kids, pets and staff.</p></div>
+      <div><svg viewBox="0 0 24 24"><path d="M8 3c0 2 2 2 2 4s-2 2-2 4M13 3c0 2 2 2 2 4s-2 2-2 4M4 15h16v2a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/></svg><h3>Deodorizing</h3><p>Fresh fabrics, room by room.</p></div>
+      <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Extending fibre life</h3><p>Your textiles stay beautiful for years longer.</p></div>
+    </div>
+    <div class="banner"><div class="ph"><img src="images/eco-living-room.jpg" alt="Bright clean Calgary living room with area rug and sofa" onerror="this.remove()"></div></div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap grid">
+    <div class="years">50<sup>+</sup><span>Years serving Calgary</span></div>
+    <div>
+      <p class="eyebrow">About Green Ingenuity</p>
+      <h2>Innovative, quality cleaning, done the safest way we know.</h2>
+      <p>Our Company’s mission is to find innovative ways to provide quality cleaning services in the safest and most environmentally-friendly manner. With over 50 years of serving Calgary customers we strive to gain your trust in taking care of your cleaning needs.</p>
+      <a class="more" href="https://www.greeningenuity.ca/about-green-ingenuity/">Read more about us
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="card">
+      <div class="side">
+        <div>
+          <p class="eyebrow" style="color:#fff;opacity:.85">Seasonal Pricing in Effect</p>
+          <h2 style="margin-top:14px">Book Online Now!</h2>
+          <p>Tell us how many rooms and two dates that work for you, and we’ll get you booked in.</p>
+        </div>
+        <div class="call"><small>Prefer to call?</small><a href="tel:4032438420">403-243-8420</a></div>
+      </div>
+      <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks! We’ll be in touch.'">
+        <label>Name<input type="text" name="name" required></label>
+        <label>Phone<input type="tel" name="phone" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Postal Code<input type="text" name="postal"></label>
+        <label class="full">Number of Rooms
+          <select name="rooms"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+        <label>Preferred Date<input type="date" name="date1"></label>
+        <label>Alternate Date<input type="date" name="date2"></label>
+        <button class="btn btn-leaf" type="submit">Book My Cleaning
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="blog">
+  <div class="wrap">
+    <div class="blog-head">
+      <div><p class="eyebrow">Bob’s Blog</p><h2 style="margin-top:14px">Tips for cleaner rugs and carpets.</h2></div>
+      <a class="more" href="https://www.greeningenuity.ca/blog/">All blog posts
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="posts">
+      <a class="post lead" href="https://www.greeningenuity.ca/blog/2017/01/05/indelible-holiday-memories/">
+        <div class="ph"><img src="images/blog-holiday-memories.jpg" alt="Living room after the holidays with area rug" onerror="this.remove()"></div>
+        <span class="meta">January 2017</span>
+        <h3>Indelible Holiday Memories Should Be in Your Mind, Not on Your Carpet</h3>
+        <p>As you get your home back to normal after a busy holiday season of family activities, celebrations and entertaining, you probably can’t help but notice that your rugs, carpet and upholstery have suffered at least some abuse.</p>
+        <span class="more">Read more</span>
+      </a>
+      <div class="side-col">
+      <a class="post side" href="https://www.greeningenuity.ca/blog/2016/03/04/a-clean-home-can-sell-itself/">
+        <div class="ph"><img src="images/blog-clean-home-sell.jpg" alt="Clean home ready for sale" onerror="this.remove()"></div>
+        <div><span class="meta">March 2016</span><h3>A Clean Home Can Sell Itself</h3><p>In a very competitive housing market, attempting to make your home standout from the rest is no easy job.</p></div>
+      </a>
+      <a class="post side" href="https://www.greeningenuity.ca/blog/2015/12/09/dont-wait-to-clean-your-carpets/">
+        <div class="ph"><img src="images/blog-dont-wait.jpg" alt="Carpet in a festive living room" onerror="this.remove()"></div>
+        <div><span class="meta">December 2015</span><h3>Don’t Wait to Clean Your Carpets</h3><p>With the holiday season in full swing many homeowners may think about putting off carpet cleaning until after the festivities are over.</p></div>
+      </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-brand">
+        <span class="logo-pill"><img class="script" src="images/logo.png" alt="Green Ingenuity"><img class="tagline" src="images/logo-tagline.png" alt="Rug, Carpet, Upholstery Cleaning"></span>
+        <p>Taking care of you, your home and the environment. Environmentally-safe rug, carpet and upholstery cleaning for Calgary homes and businesses.</p>
+        <small style="letter-spacing:.16em;text-transform:uppercase;font-weight:700;font-size:12px;color:var(--leaf)">Call us now</small><br>
+        <a class="tel" href="tel:4032438420">403-243-8420</a>
+        <div class="f-soc">
+          <a href="https://www.facebook.com/green.ingenuity1" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6H14z"/></svg></a>
+          <a href="https://twitter.com/greeningenuity" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22 5.9c-.7.3-1.5.5-2.4.6.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1-1.6-1.7-4.3-1.7-5.9 0-1 1-1.4 2.4-1.1 3.8C8.4 8.8 5.4 7.2 3.4 4.7c-1.1 1.9-.5 4.3 1.3 5.5-.7 0-1.3-.2-1.9-.5 0 2 1.4 3.7 3.3 4.1-.6.2-1.2.2-1.9.1.5 1.7 2.1 2.8 3.9 2.9-1.7 1.3-3.8 2-6 1.8 1.9 1.2 4.1 1.9 6.4 1.9 7.7 0 12-6.4 12-12v-.5c.8-.6 1.5-1.3 2-2.1z"/></svg></a>
+          <a href="https://www.pinterest.com/rosieraves/" target="_blank" rel="noopener" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2.1 0-3l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.7 1.3 1.4 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.9 1.6 1.9 1.9 0 3.3-2 3.3-4.9 0-2.5-1.8-4.3-4.4-4.3-3 0-4.8 2.3-4.8 4.6 0 .9.4 1.9.8 2.4.1.1.1.2.1.3l-.3 1.2c0 .2-.2.3-.4.2-1.4-.6-2.2-2.6-2.2-4.2 0-3.4 2.5-6.6 7.2-6.6 3.8 0 6.7 2.7 6.7 6.3 0 3.8-2.4 6.8-5.7 6.8-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.2 1-.9 2.2-1.4 2.9A10 10 0 1 0 12 2z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="https://www.greeningenuity.ca/blog/product/area-rug-cleaning/">Rug Cleaning</a></li>
+          <li><a href="https://www.greeningenuity.ca/blog/product/area-rug-cleaning/">Home Services</a></li>
+          <li><a href="https://www.greeningenuity.ca/blog/product/commercial-area-rug-cleaning/">Commercial Services</a></li>
+          <li><a href="https://www.greeningenuity.ca/blog/">Bob’s Blog</a></li>
+          <li><a href="https://www.greeningenuity.ca/contact-us/">Contact</a></li>
+          <li><a href="https://www.greeningenuity.ca/privacy-policy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Recent Blogs</h4>
+        <ul>
+          <li><a href="https://www.greeningenuity.ca/blog/2017/01/05/indelible-holiday-memories/">Indelible Holiday Memories Should Be in Your Mind</a></li>
+          <li><a href="https://www.greeningenuity.ca/blog/2016/03/04/a-clean-home-can-sell-itself/">A Clean Home Can Sell Itself</a></li>
+          <li><a href="https://www.greeningenuity.ca/blog/2015/12/09/dont-wait-to-clean-your-carpets/">Don’t Wait to Clean Your Carpets</a></li>
+          <li><a href="https://www.greeningenuity.ca/blog/">5 Ways to Help Keep Carpets Stay Cleaner Longer</a></li>
+          <li><a href="https://www.greeningenuity.ca/blog/">Prevent Falls in Your Home</a></li>
+          <li><a href="https://www.greeningenuity.ca/blog/">Wool Carpet Could Save Your Life</a></li>
+          <li><a href="https://www.greeningenuity.ca/blog/">Under the Rug</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bot">
+      <span>© Copyright Green Ingenuity Inc. | All rights reserved</span>
+      <span><a href="https://cleaningdigital.ca/" target="_blank" rel="noopener">Design by Cleaning Digital.</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="float-call" href="tel:4032438420"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call Now</a>
+
+<script>
+const items=[...document.querySelectorAll('#svcList li')];
+const imgs=[...document.querySelectorAll('.svc-visual img')];
+const cap=document.getElementById('capName');
+function activate(li){
+  items.forEach(x=>x.classList.remove('active'));li.classList.add('active');
+  const i=+li.dataset.i;
+  document.querySelectorAll('.svc-visual img').forEach(im=>im.classList.remove('show'));
+  const target=document.querySelector('.svc-visual img[alt="'+(imgs[i]&&imgs[i].alt)+'"]');
+  if(target)target.classList.add('show');
+  cap.textContent=li.querySelector('.n').textContent+' · '+li.querySelector('h3').textContent;
+}
+items.forEach(li=>li.addEventListener('mouseenter',()=>activate(li)));
+document.querySelectorAll('.toggle button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.toggle button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  const f=b.dataset.f;
+  items.forEach(li=>li.classList.toggle('hide',f!=='all'&&!li.dataset.t.includes(f)));
+  const first=items.find(li=>!li.classList.contains('hide'));if(first)activate(first);
+}));
+</script>
+</body>
+</html>
